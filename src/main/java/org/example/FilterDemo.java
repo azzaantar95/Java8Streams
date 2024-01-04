@@ -27,6 +27,13 @@ public class FilterDemo {
         newArrayList = arrayList.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
         System.out.println(newArrayList);
 
+        //stream with foreach
+
+        System.out.println("reading even numbers from arraylist using stream and foreach");
+        arrayList.stream().filter(n -> n % 2 == 0).forEach(n -> System.out.println(n));
+        System.out.println("reading even numbers from arraylist using stream and foreach with method reference");
+        arrayList.stream().filter(n -> n % 2 == 0).forEach(System.out::println);// using method reference
+
     }
 
 
